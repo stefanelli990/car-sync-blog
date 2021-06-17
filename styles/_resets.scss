@@ -1,0 +1,47 @@
+// resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+html {
+    font-size: 0.8rem;
+    @include sm {
+        font-size: 1rem;
+    }
+}
+
+body {
+    color: $dark;
+    background-color: #F3F4F9;
+}
+
+a { 
+    text-decoration: none;
+    color: $dark;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h1, h2, h3, h4, p {
+      margin-bottom: 1.5rem;
+  }

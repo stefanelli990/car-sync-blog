@@ -1,0 +1,40 @@
+//utilities
+@import 'variables';
+
+.under-line {
+    position: relative;
+    padding-bottom: 2rem;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 4px;
+        border-radius: 100px;
+        background-color: $primary;
+    }
+}
+
+.button {
+    color: $light;
+    background-color: $primary;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px solid $primary;
+    border-radius: 30px;
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: transparent;
+        color: $primary;
+    }
+}
+
+.button-ghost {
+    @extend .button; 
+    background-color: transparent;
+    color: $primary;
+    padding: 0.5rem 1.5rem;
+}
