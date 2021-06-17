@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <title>CarSync | Blog</title>
 </head>
@@ -27,7 +27,7 @@
                 <li><a href="#">Login</a></li>
                 <li><a href="#" class="button-ghost" >Sign Up</a></li>
             </ul>
-        <div class="navbar__toggle">
+        <div class="navbar__toggle toggle">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -38,9 +38,16 @@
     <!-- hamburger menu -->
 
     <div class="hamburger-menu">
-            <ul class="hamburger-menu__navlinks">
+            <ul>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Features</a></li>
+                <li class="hamburger-toggle">
+                    <span class="dropdown-toggle">Features</span>
+                    <ul class="hamburger-dropdown-content">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                    </ul>
+                    </li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Login</a></li>
                 <li><a href="#">Sign Up</a></li>
@@ -68,7 +75,8 @@
                     <h3>Automate your Toll Reimbursements</h3>
                     <div class="blogs__details">
                         <img class="blogs__avatar" src="images/blog-avatar.png" alt="">
-                        <span class="blogs__username">CarSync</span>
+                       
+                        <span class="blogs__username"> CarSync</span>
                         <span class="blogs__date">&#183; Mar 14</span>
                     </div>
                     <p>If you’re unlucky to live in a state with tolls, you know how much labor it takes to get everything reimbursed from your guests...</p>
@@ -215,13 +223,15 @@
 
     <footer class="footer">
         <div class="footer__container">
-            <span class="footer__copyright">Copyright 2020 © All Rights Reserved. CarSync.io</span>
+            
             <ul class="footer__social-links">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-medium-m"></i></a></li>
             </ul> 
+            <span class="footer__copyright">Copyright 2020 © All Rights Reserved. CarSync.io</span>
         </div>
     </footer>
 

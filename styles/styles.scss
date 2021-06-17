@@ -7,7 +7,16 @@
 //navbar
 .navbar {
     background-color: $light;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    box-shadow: 0px 8px 16px 0px rgba(172, 172, 172, 0.2);
+    @include lg {
+        position: static;
+        box-shadow: unset;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
@@ -37,7 +46,6 @@
             }
         }
         .dropdown-content {
-           
             display: none;
             position: absolute;
             top: 30px;
@@ -46,8 +54,7 @@
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             li {
-                margin-left: 0;
-                
+                margin-left: 0; 
             }
              a {
                  color: $light;
@@ -74,41 +81,85 @@
             height: 2px;;
             margin: 6px;
             
+            
         }
+        &.change {
+            .bar1 {
+               transform: rotate(-45deg) translate(-6px, 6px);
+             }
+             
+              .bar2 {
+               opacity: 0;
+             }
+             
+             .bar3 {
+               transform: rotate(45deg) translate(-6px, -5px);
+             }
+       }
     }
+    
 }
 
 //hamburger menu 
 .hamburger-menu {
     background-color: $primary;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-   
-    @include lg {
-        display: none;
+    display: none;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 20;
+    @include sm {
+        top: 88px;
     }
-    &__navlinks {
-        
-        li {
-            padding: 1rem 0 1rem 1rem;
-            border-bottom: 1px solid #3b3bb1;
+   @include lg {
+       display: none !important;
+   }
+    
+
+    a, span {
+        display: block;
+        padding: 0.7rem 1rem;
+        color: $light;
+        cursor: pointer;
+        &:hover {
+            background-color: lighten($primary, 20);
         }
-        a {
-            color: $light;
-            
-        }
-       
     }
+
+    
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &::after {
+                content: " \25BC";;     
+                font-size: 1rem;
+              
+            }
+           &.active::after {
+            content: " \25B2";
+            font-size: 1rem;
+           }
+        }
+ 
+    
+      
+          .hamburger-dropdown-content {
+            display: none;
+            background-color: $dark;
+            margin: 0 1rem;
+        } 
 }
 
 
 // title
 .title {
     &__container {
-        @include container(5rem 1rem, 1200px);
+        @include container(13rem 1rem 5rem, 1200px);
         text-align: center;
-        
+        @include lg {
+            @include container(5rem 1rem, 1200px);
+        }
     }
     .hyper-link {
         color: $primary;
@@ -116,7 +167,6 @@
 }
 
 // blogs
-
 .blogs {
     &__container {
         @include container(5rem 1rem, 1200px);
@@ -201,28 +251,20 @@
     
     background-color: $light;
     &__container {
-        @include container(1rem, 1200px);
+        @include container(2rem 1rem, 1200px);
         text-align: center;
-        @include sm {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+       
     }
     &__social-links {
-        order: 2;
+       
         display: flex;
         justify-content: center;
         
         li {
-            margin: 0 0.5rem;
+            margin: 0 1rem 1rem;
         }
-        a {
-            color: $gray;
-        }
+        
     }
-    &__copyright {
-        order: 2;
-    }
+  
 }
 
