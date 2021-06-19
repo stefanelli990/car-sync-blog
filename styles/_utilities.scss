@@ -1,21 +1,6 @@
 //utilities
 @import 'variables';
 
-.under-line {
-    position: relative;
-    padding-bottom: 2rem;
-    &::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 150px;
-        height: 4px;
-        border-radius: 100px;
-        background-color: $primary;
-    }
-}
 
 .button {
     color: $light;

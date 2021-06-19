@@ -4,12 +4,15 @@
 @import 'utilities';
 
 
-//navbar
+// mobile header
 .mobile-header {
     background-color: $light;
-   
+    @include lg {
+        display: none;
+    }
+
     .header-top {
-        @include container (1rem, 600px);
+        @include container (1rem, 1200px);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -28,7 +31,7 @@
        }
 
    .header-bottom {
-       @include container (1rem, 600px);
+       @include container (1rem, 1200px);
        display: flex;
        align-items: flex-start;
        flex-direction: column;
@@ -42,20 +45,89 @@
        li {
            margin-right: 1.5rem;
            margin-bottom: 0;
+           &:last-child {
+               margin-right: 0;
+           }
        }
    }
 }
 
-//article 
+//desktop header 
+.desktop-header {
+    background-color: $light;
+    display: none;
+    @include lg {
+        display: block;
+    }
+    .header-container {
+        @include container(1.5rem 1rem, 1200px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-left {
+        display: flex;
+        
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        li {
+            margin-right: 1.5rem;
+            margin-bottom: 0;
+        }
+        h3 {
+            margin-bottom: 0;
+            margin-right: 2rem;
+        }
+    }
+    .header-right {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+            align-items: center;
 
+            li {
+                margin-left: 1.5rem;
+                margin-bottom: 0;
+            }
+        }
+        img {
+            width: 3rem;
+        }
+    }
+}
+
+//article 
 .article {
     .article-container {
         @include container(5rem 1rem, 600px);
+        div {
+            @include sm {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .icons {
+        margin-bottom: 1.5rem;
+        order: 2;
+        img {
+            width: 1.3rem;
+            margin-right: 1rem;
+            @include sm {
+                margin-left: 1rem;
+                margin-right: 0;
+            }
+        }
     }
     .blog-details {
+        order: 1;
         display: flex;
         align-items: center;
         margin-bottom: 1.5rem;
+        font-size: 0.85rem;
         * {
             margin-right: 1rem;
         }
@@ -71,12 +143,11 @@
             color: $gray;
         }   
     }
-    .carsync-link {
-        text-decoration: underline;
-    }
+   
    ul {
        li {
-        
+        list-style: disc;
+        margin-left: 2rem;
        }
    }   
 }
